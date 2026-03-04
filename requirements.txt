@@ -1,0 +1,37 @@
+# Core Framework
+fastapi>=0.115.6
+uvicorn>=0.34.0
+pydantic[email]>=2.11.2,<3.0.0
+pydantic-settings>=2.4.0
+python-multipart
+
+# LLM & Agent Framework
+langchain==0.3.7
+langchain-core==0.3.17
+langchain-openai==0.2.8
+langchain-google-genai>=2.0.0
+langgraph==0.2.55
+langgraph-checkpoint-postgres==3.0.2
+
+# Google AI SDK (for multimodal STT)
+google-genai>=0.3.0
+
+# Speech-to-Text
+faster_whisper
+
+# Database
+psycopg[binary]==3.3.2
+psycopg_pool
+
+# HTTP & Utilities
+requests
+httpx>=0.28.1
+python-dotenv~=1.0.1
+
+# Notebooks / Evaluation (optional)
+jupyter==1.0.0
+pandas
+numpy>=1.22.4,<2.0.0
+scikit-learn
+ipython
+ipywidgets==8.1.2
