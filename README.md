@@ -10,6 +10,7 @@ ProMeet AI Service is the AI backend of [ProMeet](https://github.com/), a projec
 
 - [Architecture Overview](#-architecture-overview)
 - [Key Features](#-key-features)
+- [Demo & Screenshots](#-demo--screenshots)
 - [Agent 1: Meeting-to-Task Agent](#-agent-1-meeting-to-task-agent)
 - [Agent 2: Agentic Project Manager](#-agent-2-agentic-project-manager)
 - [Experiments & Evaluation](#-experiments--evaluation)
@@ -52,6 +53,69 @@ The AI Service operates as an independent microservice that:
 | **STT Pipeline** | Dual-provider speech-to-text (Gemini multimodal + faster-whisper) |
 | **Email Notifications** | Automated personalized task assignment emails via SMTP |
 | **Persistent Memory** | PostgreSQL-backed conversation memory via LangGraph checkpointing |
+
+---
+
+## 🖼 Demo & Screenshots
+
+### Meeting-to-Task Pipeline
+
+<table>
+  <tr>
+    <td width="50%">
+      <b>📝 Auto-Generated Transcript</b><br/>
+      <img src="docs/generated_transcipt_meeting.png" alt="Generated Transcript" width="100%"/>
+      <p><i>Vietnamese meeting audio transcribed via Gemini 2.0 Flash-Lite with speaker identification</i></p>
+    </td>
+    <td width="50%">
+      <b>📊 AI-Generated Meeting Summary</b><br/>
+      <img src="docs/generated_summary_meeting.png" alt="Generated Summary" width="100%"/>
+      <p><i>Structured MoM extraction with action items, priorities, and assignees</i></p>
+    </td>
+  </tr>
+</table>
+
+### Human-in-the-Loop Review
+
+<table>
+  <tr>
+    <td width="50%">
+      <img src="docs/HITL_preview.png" alt="Human-in-the-Loop Preview" width="100%"/>
+    </td>
+    <td width="50%">
+      <img src="docs/HITL_preview_2.png" alt="Human-in-the-Loop Review" width="100%"/>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <i>The agent pauses before task creation — users review, edit, and confirm extracted tasks before they are pushed to the project board</i>
+    </td>
+  </tr>
+</table>
+
+### Automated Task Creation
+
+<p align="center">
+  <img src="docs/automated_task_creation.png" alt="Automated Task Creation" width="80%"/>
+</p>
+<p align="center"><i>Tasks automatically created in the project board after human confirmation, with correct assignees, priorities, and due dates</i></p>
+
+### Agentic Project Manager
+
+<table>
+  <tr>
+    <td width="50%">
+      <b>🤖 Agent Workflow Trace</b><br/>
+      <img src="docs/sample_agentic_PM_workflow.png" alt="PM Agent Workflow" width="100%"/>
+      <p><i>Router → Tool Calls → Response: the agent autonomously chains API calls to resolve queries</i></p>
+    </td>
+    <td width="50%">
+      <b>💬 Chat Interface</b><br/>
+      <img src="docs/chat_with_agentic_PM.png" alt="Chat with PM Agent" width="100%"/>
+      <p><i>Natural language project management — ask about tasks, members, and statuses</i></p>
+    </td>
+  </tr>
+</table>
 
 ---
 
